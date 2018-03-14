@@ -1,3 +1,8 @@
-<p>
-  user-edit works!
-</p>
+<h2>UserEdit</h2>
+
+<form (submit)="update()">
+    <input type="text" name="firstName" [(ngModel)] ="userEdit.firstName"> 
+    <input type="text" name="lastName" [(ngModel)] ="userEdit.lastName"> 
+    <input type="text"name="email" [(ngModel)] = "userEdit.email"> 
+    <input type="submit">
+  </form>

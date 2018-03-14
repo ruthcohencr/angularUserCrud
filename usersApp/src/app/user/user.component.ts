@@ -32,4 +32,10 @@ export class UserComponent implements OnInit {
     const index = this.users.indexOf(user);
     this.users.splice(index,1);
   }
+
+  update(users: any){
+    console.log(users);
+    const index = this.users.indexOf(users.original);
+    this.users[index] = users.edited;
+  }
 }

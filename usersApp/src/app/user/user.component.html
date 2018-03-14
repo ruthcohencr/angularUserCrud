@@ -2,4 +2,6 @@
 
 {{ users | json }}
 <app-user-new (createNewUserEvent) = "create($event)"></app-user-new>
-<app-user-list [users] = "users" (deleteUserEvent)="delete($event)" ></app-user-list>
+<app-user-list [users] = "users"
+               (deleteUserEvent)="delete($event)"
+               (updateUserEvent)="update($event)" ></app-user-list>

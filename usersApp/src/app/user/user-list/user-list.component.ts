@@ -11,6 +11,7 @@ export class UserListComponent implements OnInit {
 
   @Input() users;
   @Output() deleteUserEvent = new EventEmitter();
+  @Output() updateUserEvent = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
@@ -23,5 +24,9 @@ export class UserListComponent implements OnInit {
 
   delete(user: User){
     this.deleteUserEvent.emit(user);
+  }
+
+  update(users){
+    this.updateUserEvent.emit(users);
   }
 }
