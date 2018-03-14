@@ -1,0 +1,9 @@
+<h2>UserListComponent></h2>
+
+<div *ngFor="let user of users">
+  {{ user._id }}
+  {{ user.firstName }}
+  {{ user.lastName }}
+  {{ user.email }}
+  <button (click)="delete(user)">Delete</button>
+</div>

@@ -1,0 +1,5 @@
+<h2>User Componet</h2>
+
+{{ users | json }}
+<app-user-new (createNewUserEvent) = "create($event)"></app-user-new>
+<app-user-list [users] = "users" (deleteUserEvent)="delete($event)" ></app-user-list>
